@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+import candiesRedcuer from './candiesReducer';
 
 const initialState = {}
 
@@ -8,4 +10,7 @@ const rootReducer = (state = initialState, action) => {
   }
 }
 
-export default rootReducer
+export default combineReducers({
+  candies: candiesRedcuer,
+  root: rootReducer
+})
